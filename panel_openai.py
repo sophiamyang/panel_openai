@@ -1,6 +1,6 @@
 import os
 import openai
-openai.api_key = "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"
+openai.api_key = "TYPE_YOUR_API_KEY_HERE"
 
 # OPENAI APIs
 def openai_completion(prompt):
