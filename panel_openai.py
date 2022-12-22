@@ -60,7 +60,7 @@ def get_image(_):
     if len(convos_text)>0:
         image_prompt = convos_text[-1]
         image_url = openai_image(image_prompt)
-        return pn.pane.Markdown(f"""<img src={image_url}>""", width=600)
+        return pn.pane.PNG(image_url, width=600)
 
 interactive_conversation = pn.bind(get_conversations, button_conversation)
 interactive_image = pn.bind(get_image, button_image)
@@ -68,8 +68,8 @@ interactive_image = pn.bind(get_image, button_image)
 dashboard = pn.Column(
     inp,
     pn.Row(button_conversation,button_image),
-    pn.panel(interactive_conversation, loading_indicator=True, lazy=False, height=500),
-    pn.panel(interactive_image, loading_indicator=True, lazy=False, height=500)
+    pn.panel(interactive_conversation, loading_indicator=True, height=500),
+    pn.panel(interactive_image, loading_indicator=True, height=500)
 )
 
 dashboard.servable()
