@@ -1,5 +1,7 @@
 # ChatGPT and DALL·E2 in a Panel App
 
+DEPRECATED; see https://holoviz-topics.github.io/panel-chat-examples/ for more recent examples!
+
 ## How to run?
 
 1. Get your OpenAI API key from openai.com and add your keys to the script. 
